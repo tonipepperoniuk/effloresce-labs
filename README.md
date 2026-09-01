@@ -2,8 +2,23 @@
 
 One-page static website for Effloresce Labs.
 
-## Local preview
-Open `index.html` in your browser.
+## Local Preview
+
+You can preview the site locally using any of the following options:
+
+### 1. Python Built-in Server (Recommended)
+```bash
+python3 -m http.server 8000
+```
+Open **[http://localhost:8000](http://localhost:8000)** in your browser.
+
+### 2. Node / npx
+```bash
+npx serve .
+```
+
+### 3. Direct File
+Open `index.html` directly in any web browser.
 
 ## GitHub Pages & CI/CD
 
