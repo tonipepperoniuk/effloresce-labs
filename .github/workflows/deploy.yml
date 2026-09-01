@@ -34,6 +34,7 @@ jobs:
         run: |
           echo "Checking required files..."
           test -f index.html || { echo "Error: index.html missing"; exit 1; }
+          test -f privacy.html || { echo "Error: privacy.html missing"; exit 1; }
           test -f styles.css || { echo "Error: styles.css missing"; exit 1; }
           test -f CNAME || { echo "Error: CNAME missing"; exit 1; }
           echo "Core static files verified."
@@ -47,23 +48,26 @@ jobs:
         run: |
           node -e '
             const fs = require("fs");
-            const html = fs.readFileSync("index.html", "utf8");
-            const srcRegex = /(?:src|href)=["\x27](assets\/[^"\x27]+)["\x27]/g;
-            let match;
+            const htmlFiles = ["index.html", "privacy.html"];
             let missing = 0;
-            while ((match = srcRegex.exec(html)) !== null) {
-              const file = match[1];
-              if (!fs.existsSync(file)) {
-                console.error(`Error: Referenced asset not found: ${file}`);
-                missing++;
-              } else {
-                console.log(`Asset verified: ${file}`);
+            for (const file of htmlFiles) {
+              const html = fs.readFileSync(file, "utf8");
+              const srcRegex = /(?:src|href)=["\x27](assets\/[^"\x27]+)["\x27]/g;
+              let match;
+              while ((match = srcRegex.exec(html)) !== null) {
+                const asset = match[1];
+                if (!fs.existsSync(asset)) {
+                  console.error(`Error in ${file}: Referenced asset not found: ${asset}`);
+                  missing++;
+                } else {
+                  console.log(`Verified (${file}): ${asset}`);
+                }
               }
             }
             if (missing > 0) {
               process.exit(1);
             }
-            console.log("All referenced asset links are valid.");
+            console.log("All referenced asset links are valid across all HTML files.");
           '
 
       - name: Upload Pages artifact
