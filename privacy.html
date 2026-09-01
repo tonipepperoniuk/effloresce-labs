@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
   
-  <link rel="stylesheet" href="styles.css?v=20260901b" />
+  <link rel="stylesheet" href="styles.css?v=20260901c" />
   <link rel="icon" type="image/png" href="assets/icon.png" />
 </head>
 <body>
@@ -49,158 +49,194 @@
       <article class="privacy-card">
         <header class="privacy-header">
           <h1>Privacy Policy</h1>
-          <p class="privacy-meta">Last updated: September 1, 2026</p>
+          <p class="privacy-meta">Effective Date: September 1, 2026 • Studio: Effloresce Labs</p>
         </header>
 
         <div class="privacy-callout">
           <p>
-            <strong>Summary:</strong> Effloresce Labs develops native Android utility applications (including <strong>Listi</strong> and <strong>Freezi</strong>). We prioritize local, on-device data processing and privacy. Your personal shopping lists, freezer inventories, and scanned data are stored locally on your device.
+            <strong>Summary:</strong> Effloresce Labs develops native Android utilities (including <strong>Listi</strong> and <strong>Freezi</strong>). We prioritize local, on-device data storage. Your personal shopping lists, freezer inventories, and scanned data stay strictly on your device.
           </p>
         </div>
 
-        <section class="privacy-section">
-          <h2>1. Introduction</h2>
+        <!-- Quick Table of Contents -->
+        <nav class="privacy-toc" aria-label="Table of Contents">
+          <h3>Table of Contents</h3>
+          <ul class="toc-links">
+            <li><a class="toc-link" href="#intro"><span>01.</span> Introduction</a></li>
+            <li><a class="toc-link" href="#data-storage"><span>02.</span> On-Device Data Storage</a></li>
+            <li><a class="toc-link" href="#permissions"><span>03.</span> Device Permissions</a></li>
+            <li><a class="toc-link" href="#advertising"><span>04.</span> Advertising (Google AdMob)</a></li>
+            <li><a class="toc-link" href="#third-party"><span>05.</span> Third-Party Services</a></li>
+            <li><a class="toc-link" href="#data-deletion"><span>06.</span> Data Retention & Deletion</a></li>
+            <li><a class="toc-link" href="#children"><span>07.</span> Children's Privacy</a></li>
+            <li><a class="toc-link" href="#contact"><span>08.</span> Contact Information</a></li>
+          </ul>
+        </nav>
+
+        <section id="intro" class="privacy-section">
+          <h2><span class="section-num">01</span> Introduction</h2>
           <p>
-            Effloresce Labs ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy applies to our website (<strong>https://efflorescelabs.com</strong>) and our mobile applications distributed on Google Play and other platforms, including <strong>Listi</strong>, <strong>Freezi</strong>, and upcoming utilities (collectively, the "Services").
+            Effloresce Labs ("we", "our", or "us") provides mobile applications and related web services (collectively, the "Services"), including our public website at <strong>https://efflorescelabs.com</strong> and Android applications distributed on Google Play, such as <strong>Listi</strong> and <strong>Freezi</strong>.
           </p>
           <p>
-            By using our Services, you agree to the collection and use of information in accordance with this policy.
+            This Privacy Policy outlines how our applications handle your data, our strict commitment to on-device processing, and the third-party services utilized to support our applications.
           </p>
         </section>
 
-        <section class="privacy-section">
-          <h2>2. On-Device Data Storage & Processing</h2>
+        <section id="data-storage" class="privacy-section">
+          <h2><span class="section-num">02</span> On-Device Data Storage & Privacy</h2>
           <p>
-            Our core architecture is built on an offline-first foundation:
+            Our applications are built on an offline-first architecture designed to protect your personal privacy:
           </p>
-          <ul>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Local Databases:</strong> Your items, categories, freezer maps, supermarket aisle layouts, and personal notes are stored strictly in local on-device SQLite databases (AndroidX Room). We do not operate remote servers to harvest or store your personal entries.</span>
+          <ul class="privacy-list">
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>Local SQLite Databases (Room DB):</strong> All personal user entries—including grocery items, custom supermarket aisle layouts, freezer inventory records, batch cooking notes, and price history—are stored exclusively in local SQLite database files on your physical device. We do not operate remote databases to collect, store, or profile your personal data.
+              </div>
             </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>On-Device Machine Learning & OCR:</strong> In apps such as Freezi and Listi, camera optical character recognition (OCR) is performed entirely on-device using Google ML Kit and local heuristics. Camera video frames and scanned images are processed in volatile memory and are not uploaded to the cloud.</span>
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>On-Device Machine Learning & Camera OCR:</strong> Optical character recognition (OCR) and text extraction features (such as scanning receipt prices in Listi or expiration dates in Freezi) run 100% locally via Google ML Kit on-device models. Camera video frames are analyzed in volatile memory and are never saved to disk or transmitted to external servers.
+              </div>
             </li>
           </ul>
         </section>
 
-        <section class="privacy-section">
-          <h2>3. Device Permissions & Usage</h2>
+        <section id="permissions" class="privacy-section">
+          <h2><span class="section-num">03</span> Device Permissions & Usage</h2>
           <p>
-            Our applications may request specific Android permissions solely to provide core utility features:
+            Our applications only request Android system permissions necessary to deliver explicit user-initiated features:
           </p>
-          <ul>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Camera (`android.permission.CAMERA`):</strong> Used exclusively within scanner features (such as Freezi's expiration date & packaging scanner). Video frames are analyzed locally in real time and never recorded or transmitted remotely.</span>
+          <ul class="privacy-list">
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>Camera (<code>android.permission.CAMERA</code>):</strong> Used exclusively when opening the scanner tool (e.g. Freezi's food packaging & expiry scanner). Live video feeds are analyzed on-device in real time and are never recorded, saved, or uploaded.
+              </div>
             </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Notification Listener (`NotificationListenerService`):</strong> Used optionally in Listi to allow users to automatically parse shopping items received from chat messages. Notification content is parsed locally and discarded immediately after extracting relevant items.</span>
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>Notification Listener (<code>NotificationListenerService</code>):</strong> Used optionally in Listi to enable one-tap parsing of shopping items received in messaging apps. Text is evaluated locally in memory and immediately discarded.
+              </div>
             </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Vibration & Wake Lock (`VIBRATE`, `WAKE_LOCK`):</strong> Used in in-store shopping modes to keep the screen active while you shop and provide tactile haptic feedback when checking off items.</span>
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>Vibration & Wake Lock (<code>VIBRATE</code>, <code>WAKE_LOCK</code>):</strong> Used in in-store shopping modes to keep your screen illuminated while actively navigating supermarket aisles and provide tactile confirmation when checking off items.
+              </div>
             </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Post Notifications (`POST_NOTIFICATIONS`):</strong> Used to deliver optional reminders, such as items nearing expiration or recurring routine triggers.</span>
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>Post Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Used solely to post local system reminders (such as freezer items nearing their recommended use-by date).
+              </div>
             </li>
           </ul>
         </section>
 
-        <section class="privacy-section">
-          <h2>4. Third-Party Advertising & Services</h2>
+        <section id="advertising" class="privacy-section">
+          <h2><span class="section-num">04</span> Third-Party Advertising (Google AdMob)</h2>
           <p>
-            To support ongoing development and offer our utility apps to users, our applications may display advertisements served by third-party advertising partners, primarily <strong>Google AdMob</strong>.
+            To support ongoing independent development and keep our tools accessible, our applications may display banner, interstitial, or native advertisements provided by <strong>Google AdMob</strong>.
           </p>
           <p>
-            Third-party ad networks may automatically collect and use certain non-personally identifiable information, such as:
+            Third-party ad networks may automatically collect non-personally identifiable diagnostic and telemetry data to serve relevant ads and prevent fraud:
           </p>
-          <ul>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Advertising Identifiers (e.g., Google Advertising ID / AAID).</span>
+          <ul class="privacy-list">
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>Advertising Identifiers:</strong> Google Advertising ID (AAID) to measure ad engagement and prevent repetitive ads.
+              </div>
             </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Device technical data (device model, operating system version, carrier, network connection type).</span>
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>Device & Network Information:</strong> Device model, operating system version, carrier, and general connection type.
+              </div>
             </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>General diagnostic and performance logs to measure ad delivery and prevent fraudulent activity.</span>
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>Performance & Diagnostic Logs:</strong> Aggregated crash reports and ad performance metrics.
+              </div>
             </li>
           </ul>
           <p>
-            You can control or reset personalized advertising in your device settings by going to <strong>Settings &gt; Google &gt; Ads</strong> on your Android device. For more details on how Google processes ad data, please review the <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" style="color: var(--amber-light); text-decoration: underline;">Google Privacy &amp; Terms for Advertising</a>.
+            You can view, reset, or opt out of personalized ad targeting at any time in your Android device settings under <strong>Settings &gt; Google &gt; Ads</strong>. For more information, consult the <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" style="color: var(--amber-light); text-decoration: underline;">Google Advertising Privacy Policy</a>.
           </p>
         </section>
 
-        <section class="privacy-section">
-          <h2>5. Third-Party Service Providers</h2>
+        <section id="third-party" class="privacy-section">
+          <h2><span class="section-num">05</span> Third-Party SDKs & Services</h2>
           <p>
-            Our applications utilize reliable third-party libraries:
+            Our applications integrate the following industry-standard services:
           </p>
-          <ul>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Google Play Services:</strong> For app distribution, in-app updates, and licensing. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: var(--amber-light); text-decoration: underline;">Privacy Policy</a>)</span>
+          <ul class="privacy-list">
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>Google Play Services:</strong> Core infrastructure for application distribution, security, and updates. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: var(--amber-light); text-decoration: underline;">Google Privacy Policy</a>)
+              </div>
             </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Google ML Kit (On-Device):</strong> For local text recognition and barcode scanning. (<a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener noreferrer" style="color: var(--amber-light); text-decoration: underline;">Terms &amp; Privacy</a>)</span>
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>Google ML Kit (On-Device):</strong> Local machine learning libraries for text recognition. (<a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener noreferrer" style="color: var(--amber-light); text-decoration: underline;">ML Kit Terms</a>)
+              </div>
             </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Google AdMob:</strong> For ad delivery and monetization. (<a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer" style="color: var(--amber-light); text-decoration: underline;">AdMob Policy</a>)</span>
-            </li>
-          </ul>
-        </section>
-
-        <section class="privacy-section">
-          <h2>6. Data Retention & Deletion</h2>
-          <p>
-            Because all application records are stored locally on your device:
-          </p>
-          <ul>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>You have complete control over your data at all times.</span>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span>Clearing app data via <em>Settings &gt; Apps &gt; [App Name] &gt; Clear Storage</em> or uninstalling the application permanently deletes all locally stored data from your device.</span>
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>Google AdMob:</strong> Monetization and ad delivery framework. (<a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener noreferrer" style="color: var(--amber-light); text-decoration: underline;">AdMob Policies</a>)
+              </div>
             </li>
           </ul>
         </section>
 
-        <section class="privacy-section">
-          <h2>7. Children's Privacy</h2>
+        <section id="data-deletion" class="privacy-section">
+          <h2><span class="section-num">06</span> Data Retention, Control & Deletion</h2>
           <p>
-            Our Services are general utility applications and are not directed to children under the age of 13. We do not knowingly collect personal identifiable information from children. If you believe that a child has provided us with personal information, please contact us so we can take appropriate measures.
+            Because all application records are stored locally on your device, you retain full ownership and control over your data:
+          </p>
+          <ul class="privacy-list">
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>Immediate Data Deletion:</strong> You can permanently wipe all locally stored databases, custom layouts, and logs at any time by going to <em>Settings &gt; Apps &gt; [App Name] &gt; Storage &amp; Cache &gt; Clear Storage</em> on your Android device.
+              </div>
+            </li>
+            <li class="privacy-list-item">
+              <span class="privacy-list-bullet"></span>
+              <div class="privacy-list-text">
+                <strong>App Uninstallation:</strong> Uninstalling the application automatically deletes the private application sandbox and all associated local database files from your device.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section id="children" class="privacy-section">
+          <h2><span class="section-num">07</span> Children's Privacy</h2>
+          <p>
+            Our utility applications are intended for a general audience and are not targeted toward children under the age of 13. We do not knowingly collect personally identifiable information from children. If you are a parent or guardian and have questions regarding our privacy practices, please contact us.
           </p>
         </section>
 
-        <section class="privacy-section">
-          <h2>8. Changes to This Privacy Policy</h2>
+        <section id="contact" class="privacy-section">
+          <h2><span class="section-num">08</span> Contact Information</h2>
           <p>
-            We may update our Privacy Policy periodically. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date at the top of this document. We advise you to review this page periodically for any updates.
+            If you have questions, inquiries, or feedback regarding this Privacy Policy or our applications, please reach out to us:
           </p>
-        </section>
-
-        <section class="privacy-section">
-          <h2>9. Contact Us</h2>
-          <p>
-            If you have any questions, feedback, or concerns regarding this Privacy Policy or our practices, please contact us at:
-          </p>
-          <div class="contact-actions" style="justify-content: flex-start; margin-top: 1rem;">
+          <div class="contact-actions" style="justify-content: flex-start; margin-top: 1.25rem;">
             <a class="btn btn-primary" href="mailto:hello@efflorescelabs.com">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               <span>hello@efflorescelabs.com</span>
             </a>
             <a class="btn btn-secondary" href="https://efflorescelabs.com">
-              <span>Visit efflorescelabs.com</span>
+              <span>efflorescelabs.com</span>
             </a>
           </div>
         </section>
