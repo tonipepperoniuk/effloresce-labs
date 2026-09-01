@@ -2,8 +2,6 @@ name: Deploy GitHub Pages
 
 on:
   push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -15,11 +13,10 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# Do not cancel in-progress runs as we want to allow production deployments to complete.
+# Cancel superseded test runs on non-main branches/PRs while allowing main deployments to finish
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 
 jobs:
   build-and-validate:

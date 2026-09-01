@@ -10,8 +10,8 @@ Open `index.html` in your browser.
 This website is automatically built and deployed to GitHub Pages using GitHub Actions (`.github/workflows/deploy.yml`).
 
 ### Workflow Details
-- **Pull Requests**: Pull requests targeting `main` automatically run the `build-and-validate` job to verify static files, asset references, and build integrity without deploying to live.
-- **Publishing (`main`)**: Merging or pushing to `main` executes validation and publishes the site directly to GitHub Pages (`efflorescelabs.com`).
+- **Branch Pushes & Pull Requests**: Pushing to any branch or opening a pull request targeting `main` automatically runs the `build-and-validate` job to verify static files, asset references, and build integrity without deploying to live.
+- **Publishing (`main`)**: Pushing or merging directly to `main` executes validation and publishes the site directly to GitHub Pages (`efflorescelabs.com`).
 - **Manual Trigger**: Can also be triggered manually via GitHub Actions **Run workflow** (`workflow_dispatch`).
 
 ### GitHub Repository Setup
