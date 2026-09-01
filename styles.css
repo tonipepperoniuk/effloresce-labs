@@ -664,8 +664,10 @@ a {
 /* Pipeline / In The Lab Section */
 .pipeline-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  max-width: 880px;
+  margin: 0 auto;
 }
 
 .pipeline-card {
