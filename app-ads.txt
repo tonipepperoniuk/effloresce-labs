@@ -1,0 +1,4 @@
+# Google AdMob Authorized Digital Sellers (app-ads.txt)
+# For Effloresce Labs - https://efflorescelabs.com/app-ads.txt
+# Replace pub-XXXXXXXXXXXXXXXX with your live AdMob publisher ID from Google AdMob Console (Settings > Account Information)
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
