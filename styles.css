@@ -702,6 +702,12 @@ a {
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
 }
 
+.product-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
 .pipeline-header {
   display: flex;
   justify-content: space-between;
