@@ -1,3 +1,7 @@
 # Google AdMob Authorized Digital Sellers (app-ads.txt)
 # https://support.google.com/admob/answer/9363762
 google.com, pub-7735148594625198, DIRECT, f08c47fec0942fa0
+
+# Unity Ads Bidding
+unityads.com, 800414600, DIRECT, f08c47fec0942fa0
+unity3d.com, 800414600, DIRECT, f08c47fec0942fa0
