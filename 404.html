@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Page not found - Effloresce Labs" />
+  <meta name="theme-color" content="#09080e" />
+  <title>Page Not Found (404) | Effloresce Labs</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="/styles.css?v=20261026a" />
+  <link rel="icon" type="image/png" href="/assets/icon.png" />
+  <style>
+    .error-wrap {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .error-card {
+      background: var(--panel-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 3.5rem 2.5rem;
+      max-width: 580px;
+      width: 100%;
+      text-align: center;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+    .error-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 4.5rem;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--amber-light), var(--amber));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1rem;
+    }
+    .error-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+    .error-desc {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .error-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrap">
+        <a class="brand" href="/" aria-label="Effloresce Labs Home">
+          <div class="brand-logo-wrap">
+            <img src="/assets/icon.png" alt="Effloresce Labs Logo" class="brand-logo" width="32" height="32" loading="eager" decoding="async" />
+          </div>
+          <span>Effloresce Labs</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/listi/">Listi</a>
+          <a class="nav-link" href="/privacy.html">Privacy</a>
+        </nav>
+        <a class="nav-cta" href="/listi/">Get Listi</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="error-wrap">
+    <div class="error-card">
+      <div class="error-code">404</div>
+      <h1 class="error-title">Page not found</h1>
+      <p class="error-desc">
+        The page you are looking for doesn't exist, has been moved, or the link you followed may be incorrect.
+      </p>
+      <div class="error-actions">
+        <a class="btn btn-primary" href="/">
+          <span>← Back to Home</span>
+        </a>
+        <a class="btn btn-secondary" href="/listi/">
+          <span>Explore Listi App</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/icon.png" alt="Effloresce Labs" class="footer-logo" width="26" height="26" loading="lazy" decoding="async" />
+        <span>Effloresce Labs</span>
+      </div>
+      <p class="footer-copy">
+        © <span id="year"></span> Effloresce Labs. Possibilities the size of an ocean.
+      </p>
+      <div class="footer-links">
+        <a class="footer-link" href="/">Home</a>
+        <a class="footer-link" href="/listi/">Listi</a>
+        <a class="footer-link" href="/privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
