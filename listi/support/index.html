@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Listi Support, Help, and Frequently Asked Questions. Get assistance with supermarket aisle layouts, grocery sync, and feature suggestions." />
+  <meta name="theme-color" content="#0284c7" />
+  <title>Listi Support & FAQs • Effloresce Labs</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="/styles.css?v=20261026a" />
+  <link rel="icon" type="image/png" href="/assets/listi-icon.png" />
+  <style>
+    .support-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 6rem;
+      position: relative;
+      z-index: 1;
+    }
+    .support-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .support-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-full);
+      background: rgba(2, 132, 199, 0.12);
+      border: 1px solid rgba(2, 132, 199, 0.35);
+      color: #38bdf8;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    .faq-group {
+      margin-bottom: 3rem;
+    }
+    .faq-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .faq-card {
+      background: var(--panel-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      transition: var(--transition);
+    }
+    .faq-card:hover {
+      border-color: var(--border-light);
+      background: var(--panel-hover);
+    }
+    .faq-card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+    }
+    .faq-card p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.65;
+      margin: 0;
+    }
+    .direct-help-card {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.12), rgba(2, 132, 199, 0.03));
+      border: 1px solid rgba(2, 132, 199, 0.35);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin-top: 3.5rem;
+    }
+    .direct-help-card h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+    .direct-help-card p {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      margin-bottom: 1.75rem;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrap">
+        <a class="brand" href="/" aria-label="Effloresce Labs Home">
+          <div class="brand-logo-wrap">
+            <img src="/assets/icon.png" alt="Effloresce Labs Logo" class="brand-logo" width="32" height="32" loading="eager" decoding="async" />
+          </div>
+          <span>Effloresce Labs</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a class="nav-link" href="/listi/">Listi</a>
+          <a class="nav-link" href="/listi/support">Support</a>
+          <a class="nav-link" href="/listi/privacy">Privacy</a>
+        </nav>
+        <a class="nav-cta" href="/listi/">← Back to Listi</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="support-wrap">
+      <div class="support-header">
+        <div class="support-badge">
+          <span>🛠️ Customer Support & Help Desk</span>
+        </div>
+        <h1 class="hero-title" style="font-size: 2.4rem; margin-bottom: 0.75rem;">
+          How can we help with <span style="color: #38bdf8;">Listi?</span>
+        </h1>
+        <p class="hero-lead" style="max-width: 620px; margin: 0 auto;">
+          Find quick answers to common questions about aisle routing, custom supermarket layouts, and on-device privacy.
+        </p>
+      </div>
+
+      <!-- FAQ Section -->
+      <div class="faq-group">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+
+        <div class="faq-card">
+          <h3>How does Listi determine my supermarket aisle walking order?</h3>
+          <p>
+            Listi comes pre-seeded with authentic store blueprints for the UK's leading supermarkets (Tesco, Aldi, Sainsbury's, Asda, Lidl, Waitrose, M&S). When you add groceries like "Milk" or "Apples", Listi maps them to their respective retail aisle categories and arranges your checklist sequentially from the store entrance to the checkout.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3>Can I customize aisles for my local store?</h3>
+          <p>
+            Yes! Every neighbourhood store layout can vary. Go to the <strong>Stores</strong> tab in Listi, select your supermarket, and customize the aisle sequence or drag and drop aisles to reflect your exact local branch layout. Your custom order is automatically saved.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3>Is my shopping data shared or stored on external servers?</h3>
+          <p>
+            No. Listi is built on a strict <strong>100% offline-first architecture</strong>. All your items, custom layouts, and shopping history are stored locally in a private SQLite database on your device. We do not require accounts, passwords, or cloud logins.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3>How do I use voice dictation to add items?</h3>
+          <p>
+            Tap the <strong>+</strong> button at the bottom of the shopping list, then tap the 🎙️ microphone icon in the input field. You can speak a single item or tap the "Batch Add" tab to dictate multiple items consecutively.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3>What if a grocery item is placed in the wrong aisle?</h3>
+          <p>
+            Tap any item in your list to edit its assigned category or aisle. You can also reassign it with one tap. If an everyday grocery item is unrecognized by our built-in dictionary, let us know via email and we'll add it to the next release!
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h3>How do I request a refund or cancel an in-app subscription?</h3>
+          <p>
+            All billing and purchases are processed directly and securely by Google Play (on Android) or Apple App Store (on iOS). You can manage or cancel subscriptions anytime in your device's App Store or Google Play account settings.
+          </p>
+        </div>
+      </div>
+
+      <!-- Direct Contact Card -->
+      <div class="direct-help-card">
+        <h2>Still have questions or found a bug?</h2>
+        <p>
+          We're an independent engineering studio and actively read every email. Whether you have feedback, feature requests, or need troubleshooting assistance, reach out directly.
+        </p>
+        <div class="contact-actions" style="justify-content: center;">
+          <button id="copySupportEmail" class="copy-btn" type="button" aria-label="Copy support email address">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <span>Copy Support Email</span>
+          </button>
+          <a class="btn btn-primary" href="mailto:efflorescelabs@gmail.com?subject=Listi%20Support%20Request">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <span>Email efflorescelabs@gmail.com</span>
+          </a>
+          <a class="btn btn-secondary" href="https://github.com/tonipepperoniuk/listi/issues" target="_blank" rel="noopener noreferrer">
+            <span>GitHub Issue Tracker</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Interactive Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span>Support email copied to clipboard!</span>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/icon.png" alt="Effloresce Labs" class="footer-logo" width="26" height="26" loading="lazy" decoding="async" />
+        <span>Effloresce Labs</span>
+      </div>
+      <p class="footer-copy">
+        © <span id="year"></span> Effloresce Labs • Listi Support
+      </p>
+      <div class="footer-links">
+        <a class="footer-link" href="/">Home</a>
+        <a class="footer-link" href="/listi/">Listi</a>
+        <a class="footer-link" href="/listi/support">Support</a>
+        <a class="footer-link" href="/listi/privacy">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const copyBtn = document.getElementById('copySupportEmail');
+    const toast = document.getElementById('toast');
+    let toastTimeout;
+
+    if (copyBtn) {
+      copyBtn.addEventListener('click', async () => {
+        const email = 'efflorescelabs@gmail.com';
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(email);
+          } else {
+            const textArea = document.createElement('textarea');
+            textArea.value = email;
+            textArea.style.position = 'fixed';
+            textArea.style.opacity = '0';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+          }
+          clearTimeout(toastTimeout);
+          toast.classList.add('show');
+          toastTimeout = setTimeout(() => {
+            toast.classList.remove('show');
+          }, 2800);
+        } catch (err) {
+          window.location.href = 'mailto:' + email + '?subject=Listi%20Support%20Request';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

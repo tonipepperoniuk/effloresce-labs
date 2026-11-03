@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Listi is a supermarket-aware shopping list builder and in-store aisle navigator designed to eliminate backtracking in Tesco, Aldi, Sainsbury's, Asda, and more. 100% offline-first and private." />
+  <meta name="theme-color" content="#0284c7" />
+  <title>Listi • Supermarket Navigator & Smart Shopping List</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="/styles.css?v=20261026a" />
+  <link rel="icon" type="image/png" href="/assets/listi-icon.png" />
+  <style>
+    .hero-sky-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-full);
+      background: rgba(2, 132, 199, 0.12);
+      border: 1px solid rgba(2, 132, 199, 0.35);
+      color: #38bdf8;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
+    }
+    .hero-sky-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #38bdf8;
+      box-shadow: 0 0 10px #38bdf8;
+      animation: pulse 2s infinite;
+    }
+    .text-sky-gradient {
+      background: linear-gradient(135deg, #38bdf8 0%, #0284c7 60%, #0369a1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .app-hero-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(2, 132, 199, 0.35);
+      margin-bottom: 1.25rem;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+    }
+    .store-chips {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-top: 1.25rem;
+    }
+    .store-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+    .store-chip.tesco { border-color: rgba(0, 83, 159, 0.5); color: #60a5fa; }
+    .store-chip.aldi { border-color: rgba(10, 34, 64, 0.8); color: #93c5fd; }
+    .store-chip.sainsburys { border-color: rgba(235, 99, 0, 0.5); color: #fb923c; }
+    .store-chip.asda { border-color: rgba(120, 190, 32, 0.5); color: #a3e635; }
+    .store-chip.lidl { border-color: rgba(0, 80, 170, 0.5); color: #38bdf8; }
+    .store-chip.waitrose { border-color: rgba(43, 82, 56, 0.7); color: #4ade80; }
+  </style>
+</head>
+<body>
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="glow-orb glow-1"></div>
+    <div class="glow-orb glow-2"></div>
+    <div class="glow-orb glow-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="nav-wrap">
+        <a class="brand" href="/" aria-label="Effloresce Labs Home">
+          <div class="brand-logo-wrap">
+            <img src="/assets/icon.png" alt="Effloresce Labs Logo" class="brand-logo" width="32" height="32" loading="eager" decoding="async" />
+          </div>
+          <span>Effloresce Labs</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a class="nav-link" href="/listi/">Overview</a>
+          <a class="nav-link" href="#features">Features</a>
+          <a class="nav-link" href="/listi/support">Support</a>
+          <a class="nav-link" href="/listi/privacy">Privacy</a>
+        </nav>
+        <a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.efflorescelabs.listi" target="_blank" rel="noopener noreferrer">Download Listi</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <img src="/assets/listi-icon.png" alt="Listi App Icon" class="app-hero-icon" width="72" height="72" loading="eager" />
+          
+          <div class="hero-sky-badge">
+            <span class="dot"></span>
+            <span>Listi v1.0 • Built for UK Supermarkets</span>
+          </div>
+
+          <h1 class="hero-title">
+            Navigate aisles.<br />
+            Shop at the <span class="text-sky-gradient">speed of thought.</span>
+          </h1>
+
+          <p class="hero-lead">
+            The supermarket-aware shopping list that automatically sorts your groceries by aisle. Walk straight from entrance to checkout without ever backtracking across the store.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.efflorescelabs.listi" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.793 12 3.61 22.186a2.37 2.37 0 0 1-.61-.955V2.77c.14-.367.35-.694.61-.956zm11.24 11.242l2.316 2.315-11.83 6.76 9.514-9.075zm2.983-1.706c.642.368 1.05 1.05 1.05 1.804s-.408 1.436-1.05 1.804l-2.023 1.156-2.525-2.525 2.525-2.525 2.023 1.156zM5.335 3.185l11.83 6.76-2.316 2.316L5.335 3.185z"/></svg>
+              <span>Get on Google Play</span>
+            </a>
+            <a class="btn btn-secondary" href="/listi/support">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              <span>Help & Support</span>
+            </a>
+          </div>
+
+          <div class="store-chips">
+            <span class="store-chip tesco">Tesco</span>
+            <span class="store-chip aldi">Aldi</span>
+            <span class="store-chip sainsburys">Sainsbury's</span>
+            <span class="store-chip asda">Asda</span>
+            <span class="store-chip lidl">Lidl</span>
+            <span class="store-chip waitrose">Waitrose & M&S</span>
+          </div>
+        </div>
+
+        <!-- App Preview Card -->
+        <div class="showcase-container">
+          <div class="floating-badge badge-top-right">
+            <span>🛒 Live Route Optimizer</span>
+          </div>
+
+          <div class="showcase-card">
+            <div class="device-header">
+              <span class="font-mono">10:24</span>
+              <div style="display: flex; gap: 6px; align-items: center;">
+                <span>5G</span>
+                <span>100%</span>
+              </div>
+            </div>
+
+            <div class="device-app-bar">
+              <div class="app-icon-wrap" style="background: #0284c7;">
+                <img src="/assets/listi-icon.png" alt="Listi" class="app-icon" width="44" height="44" />
+              </div>
+              <div class="app-meta">
+                <h3>Aldi • Walking Route</h3>
+                <p>12 items • 3 aisles remaining</p>
+              </div>
+            </div>
+
+            <div class="mockup-widgets">
+              <div class="widget-item">
+                <div class="widget-left">
+                  <div class="widget-icon emerald">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <div class="widget-info">
+                    <h4>Fruit & Veg • Aisle 1</h4>
+                    <span>Apples, Bananas, Spinach</span>
+                  </div>
+                </div>
+                <span class="widget-status status-active">Done</span>
+              </div>
+
+              <div class="widget-item">
+                <div class="widget-left">
+                  <div class="widget-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  </div>
+                  <div class="widget-info">
+                    <h4>Bakery • Aisle 2</h4>
+                    <span>Sourdough Bread, Croissants</span>
+                  </div>
+                </div>
+                <span class="widget-status status-due">Next Up</span>
+              </div>
+
+              <div class="widget-item">
+                <div class="widget-left">
+                  <div class="widget-icon purple">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                  </div>
+                  <div class="widget-info">
+                    <h4>Dairy & Chilled • Aisle 4</h4>
+                    <span>Whole Milk, Cheddar Cheese</span>
+                  </div>
+                </div>
+                <span class="widget-status status-sync">Pending</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <span>🔒 100% On-Device & Private</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Engineered for Frictionless Grocery Shopping</span>
+          <h2 class="section-title">Built for the real supermarket floor.</h2>
+          <p class="section-desc">
+            No messy cloud logins, no slow loading spinners in poor mobile reception areas. Just surgical grocery efficiency.
+          </p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon" style="background: rgba(2, 132, 199, 0.15); border-color: rgba(2, 132, 199, 0.4); color: #38bdf8;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
+            </div>
+            <h3>Smart Aisle Route Sorting</h3>
+            <p>
+              Listi automatically maps items to the exact layout of your local supermarket. Bread, milk, and veg are grouped into an optimal walking order.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon emerald">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+            </div>
+            <h3>Live Shop Mode</h3>
+            <p>
+              Keeps your screen awake, disables accidental navigation gestures, provides tactile haptic feedback on checkoff, and tracks your progress live.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>100% Offline & Private</h3>
+            <p>
+              Supermarkets are notorious dead zones for cellular signal. Listi stores all lists in a local SQLite database on your device with zero cloud lag.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.4); color: var(--amber-light);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+            </div>
+            <h3>Rapid Entry & Voice Dictation</h3>
+            <p>
+              Add multiple items at once by pasting a recipe, speak items aloud via continuous speech recognition, or rapid-fire add with return-key flow.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon emerald">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <h3>Custom Store Profiles</h3>
+            <p>
+              Every supermarket is laid out differently. Customize aisle orders for your neighbourhood Tesco Extra, Aldi, or Sainsbury's with simple drag and drop.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" style="background: rgba(2, 132, 199, 0.15); border-color: rgba(2, 132, 199, 0.4); color: #38bdf8;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            </div>
+            <h3>Glance Home Screen Widget</h3>
+            <p>
+              Check off items directly from your Android home screen widget without ever needing to launch the app while standing at the shelf.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support CTA Section -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-card">
+          <h2 class="contact-title">Questions, Feedback or Missing Items?</h2>
+          <p class="contact-subtitle">
+            Need support with Listi, have a feature suggestion, or want a store layout added? We're here to help.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="/listi/support">
+              <span>Visit Listi Support & FAQs</span>
+            </a>
+            <a class="btn btn-secondary" href="/listi/privacy">
+              <span>View Privacy Policy</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/icon.png" alt="Effloresce Labs" class="footer-logo" width="26" height="26" loading="lazy" decoding="async" />
+        <span>Effloresce Labs</span>
+      </div>
+      <p class="footer-copy">
+        © <span id="year"></span> Effloresce Labs • Listi: Possibilities the size of an ocean.
+      </p>
+      <div class="footer-links">
+        <a class="footer-link" href="/">Home</a>
+        <a class="footer-link" href="/listi/">Listi</a>
+        <a class="footer-link" href="/listi/support">Support</a>
+        <a class="footer-link" href="/listi/privacy">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
